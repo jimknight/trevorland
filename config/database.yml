@@ -17,8 +17,7 @@ development:
   encoding: unicode
   database: trevorland_development
   pool: 5
-  username: trevorland
-  password:
+  username: <%= `whoami` %>
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -43,13 +42,11 @@ test:
   encoding: unicode
   database: trevorland_test
   pool: 5
-  username: trevorland
-  password:
+  username: <%= `whoami` %>
 
 production:
   adapter: postgresql
   encoding: unicode
   database: trevorland_production
   pool: 5
-  username: trevorland
-  password:
+  username: postgres
