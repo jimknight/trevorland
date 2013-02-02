@@ -1,3 +1,15 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+jQuery ->
+  text = $("h1").text()
+  newhtml = ""
+  i = 0
+
+  while i < text.length
+    if text[i] is " "
+      newhtml += " "
+    else
+      if i%2 == 0
+        newhtml += "<span class='even'>" + text[i] + "</span>"
+      else
+        newhtml += "<span class='odd'>" + text[i] + "</span>"
+    i++
+  $("h1").html(newhtml)
